@@ -31,12 +31,14 @@ import deliveryPage from "./components/deliveryPage";
 import deliveryAddress from "./components/deliveryAddress";
 import deliveryMap from "./components/delMaps";
 import delLiveTrackingMaps from "./components/delLiveTrackingMap";
+import allLogins from "./components/allLogins";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path={"/"} component={userLogin} />
+      <Route exact path={"/"} component={allLogins} />
+        <Route path={"/userLogin"} component={userLogin} />
         <Route path={"/restaurantLogin"} component={restLogin} />
         <Route path={"/deliveryLogin"} component={delLogin} />
         <Route path={"/register"} component={userRegister} />
