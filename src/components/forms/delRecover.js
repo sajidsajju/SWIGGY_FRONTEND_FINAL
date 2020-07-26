@@ -101,7 +101,7 @@ export default function DelRecovery() {
         };
 
         axios
-          .post("http://localhost:5000/api/recover", loginDetails)
+          .post("/api/recover", loginDetails)
           .then((res) => {
             if (!res.data.success) {
               setRecoverSuccess("");

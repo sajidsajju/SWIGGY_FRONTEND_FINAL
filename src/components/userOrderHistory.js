@@ -140,7 +140,7 @@ export default function UserOrderHistory({ match }) {
 
     const orders = async () => {
       await axios
-        .get("http://localhost:5000/api/getAllOrders/", config)
+        .get("/api/getAllOrders/", config)
         .then((res) => {
 
           if (res.data.success) {
@@ -161,7 +161,7 @@ export default function UserOrderHistory({ match }) {
       },
     };
     await axios
-      .get("http://localhost:5000/api/getAllOrders/", config)
+      .get("/api/getAllOrders/", config)
       .then((res) => {
 
         if (res.data.success) {
@@ -182,7 +182,7 @@ export default function UserOrderHistory({ match }) {
     };
 
     axios
-      .get(`http://localhost:5000/api/cancelOrder/${itemID}`, config)
+      .get(`/api/cancelOrder/${itemID}`, config)
       .then((res) => {
         if (res.data.success) {
           console.log(res.data.message)

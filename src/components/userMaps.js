@@ -93,7 +93,7 @@ function Maps() {
         Authorization: "Bearer " + localStorage.getItem("user-token"),
       },
     };
-    axios.get(`http://localhost:5000/api/location`, config)
+    axios.get(`/api/location`, config)
       .then((res) => {
         if (res.data.success) {
           setLocation([res.data.message.latitude, res.data.message.longitude]);
@@ -119,7 +119,7 @@ function Maps() {
       },
     };
     axios
-      .post(`http://localhost:5000/api/location/${location[0]}/${location[1]}`, formData, config)
+      .post(`/api/location/${location[0]}/${location[1]}`, formData, config)
       .then((res) => {
 
         if (res.data.success) {
