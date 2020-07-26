@@ -51,13 +51,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": {
-    "/api": {
-      "target": "https://swiggyfoodapp1.herokuapp.com/",
-      "pathRewrite": {
-        "^/api": "/"
-      }
+  }, 
+  "proxies": {
+    "/api/": {
+      "origin": "https://swiggyfoodapp1.herokuapp.com/"
     }
   }
 }
