@@ -3,6 +3,9 @@
     "proxies": {
         "/api/": {
             "origin": "${API_URL}"
+        },
+        "/uploads/": {
+            "origin": "${UPLOAD_URL}"
         }
     }
 }
